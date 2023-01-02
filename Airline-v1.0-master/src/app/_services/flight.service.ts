@@ -71,10 +71,10 @@ export class FlightService {
   }
 
   createPayment(payment: Payment): Observable<any> {
-    return this.http.post(`${this.basePathCheckin}/save`, payment, { responseType: 'text' });
+    return this.http.post(`${this.basePathPayment}/save`, payment, { responseType: 'text' });
   }
 
   createCheckin(checkin: Checkin): Observable<any> {
-    return this.http.post(`${this.basePathPayment}/save`, checkin, { responseType: 'text' });
+    return this.http.post(`${this.basePathCheckin}/save`, checkin, { responseType: 'text' });
   }
 }
