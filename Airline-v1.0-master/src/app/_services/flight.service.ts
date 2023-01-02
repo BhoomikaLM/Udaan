@@ -5,6 +5,7 @@ import { Flight } from './flight';
 import { Book } from './book';
 import { User } from './user';
 import { Payment } from './payment';
+import { Checkin } from './checkin';
 
 
 @Injectable({
@@ -18,6 +19,7 @@ export class FlightService {
   private basePathBook = 'http://localhost:8090/rest/bookticket';
   private basePathRegister = 'http://localhost:8090/registerNewUser';
   private basePathPayment = 'http://localhost:8090/rest/payment';
+  private basePathCheckin = 'http://localhost:8090/rest/checkin';
 
   requestHeader = new HttpHeaders({ "No-Auth": "false" });
   constructor(private http: HttpClient) { }
@@ -69,6 +71,10 @@ export class FlightService {
   }
 
   createPayment(payment: Payment): Observable<any> {
-    return this.http.post(`${this.basePathPayment}/save`, payment, { responseType: 'text' });
+    return this.http.post(`${this.basePathCheckin}/save`, payment, { responseType: 'text' });
+  }
+
+  createCheckin(checkin: Checkin): Observable<any> {
+    return this.http.post(`${this.basePathPayment}/save`, checkin, { responseType: 'text' });
   }
 }

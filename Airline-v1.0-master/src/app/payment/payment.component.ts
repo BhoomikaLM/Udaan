@@ -19,6 +19,7 @@ export class PaymentComponent implements OnInit {
     this.payment = new Payment();
     this.payment.amount = this.activatedRoute.snapshot.params['fare'];
     console.log(this.payment.amount)
+    
   }
   successpage() {
     this.router.navigateByUrl('/paymentemail')
@@ -39,5 +40,4 @@ export class PaymentComponent implements OnInit {
     const uuid = new ShortUniqueId({ length: 5 })
     this.payment.pnr = uuid()
   }
-
 }
