@@ -1,0 +1,10 @@
+#danger{
+    color: brown;
+}
+#info {
+    color:rgb(82, 165, 165);
+}
+.allflight {
+    background: linear-gradient(rgba(119, 137, 137, 0.3),rgba(168, 211, 209, 0.5)),url('/assets/flight7.jpg');
+
+}
